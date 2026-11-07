@@ -1,0 +1,17 @@
+{
+  "name": "ecocistema-arrayan",
+  "version": "1.0.0",
+  "description": "Plataforma de notas del Colegio Montessori Ecocistema Arrayán (web + app instalable)",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning server.js",
+    "dev": "node --no-warnings=ExperimentalWarning --watch server.js",
+    "demo": "node --no-warnings=ExperimentalWarning scripts/demo.js",
+    "test": "node --no-warnings=ExperimentalWarning --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "license": "UNLICENSED"
+}
