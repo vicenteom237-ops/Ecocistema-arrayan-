@@ -1,0 +1,19 @@
+# Despliegue en Render.com (Blueprint). El disco guarda la base de datos de forma permanente.
+services:
+  - type: web
+    name: ecocistema-arrayan
+    runtime: node
+    plan: starter
+    region: oregon
+    buildCommand: echo "Sin dependencias que instalar"
+    startCommand: npm start
+    healthCheckPath: /api/status
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: datos
+      mountPath: /var/data
+      sizeGB: 1
